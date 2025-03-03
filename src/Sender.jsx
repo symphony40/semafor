@@ -21,11 +21,7 @@ function Sender() {
   }, []);
 
   const sendColor = (color) => {
-    if (ws && ws.redyState === WebSocket.OPEN) ws.send(color);
-    else
-    {
-        alert("Disconnetcted");
-    }
+    if (ws) ws.send(color);
   };
 
   return (
